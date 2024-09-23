@@ -36,8 +36,8 @@ local plugins = {
           rust = { exec = "rustc", args = { "$(FNAME)" } },
           java = { exec = "javac", args = { "$(FNAME)" } },
         },
-        received_problems_path = "$(HOME)/Storage/Problem-Solving/$(PROBLEM).$(FEXT)",
-        received_contests_directory = "$(HOME)/Storage/Problem-Solving/",
+        received_problems_path = "$(HOME)/Storage/Problem-Solving/Problems/$(PROBLEM).$(FEXT)",
+        received_contests_directory = "$(HOME)/Storage/Problem-Solving/Problems/",
         received_contests_problems_path = "$(PROBLEM).$(FEXT)",
         received_problems_prompt_path = false,
         testcases_use_single_file = true,
@@ -47,12 +47,11 @@ local plugins = {
         open_received_contests = false,
         received_files_extension = "cpp",
         template_file = {
-          cpp = "~/.config/nvim/template/CPP.cpp",
+          cpp = "./Storage/Problem-Solving/Resources/Template/CPP.cpp",
         },
       }
     end,
   },
-
   {
     "williamboman/mason.nvim",
     opts = {
